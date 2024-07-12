@@ -1,8 +1,13 @@
 window.onload = function() {
   let vid = document.getElementById('vid');
 
-  if (!vid.canPlayType) {
-    alert('I died');
+  if (vid.canPlayType && vid.canPlayType('video/webm') == '') {
+    alert('I died. Your browser is unable to play videos.');
+    let warn_banner = document.createElement('div');
+    warn_banner.innerHTML = 'I died. Your browser is unable to play videos.';
+    warn_banner.classList.add('warn');
+    vid.before(warn_banner);
+    return;
   }
 
   addEventListener('keyup', evt => {

@@ -8,3 +8,12 @@ body {
   width: 100%;
   object-fit: fill;
 }
+
+.warn {
+  font-family: sans;
+  font-size: 200%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
